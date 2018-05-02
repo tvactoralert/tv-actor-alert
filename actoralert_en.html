@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+<!-- https://www.foxtv.co.uk/schedule/fox
+file:///home/geko/.xmltv/actor-alert-feed/actoralert.html?mario%20monicelli,italia_1|amici%20miei|1525164394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|rai%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|rai%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|rae%201|1525564394000
+https://gekomad.github.io/actor-alert-feed/actoralert.html?mario%20monicelli,italia_1|amici%20miei|1525164394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|rai%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|rai%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|sky%201|1525564394000;canale%205|la%20vita%20%C3%A8%20bella|1525364394000;cuori%20nella%20tormenta|rete%204|1524564394000;il%20giorno%20del%20condor|rae%201|1525564394000
+-->
+var parser = document.createElement('a');
+parser.href = window.location.href ;
+
+
+
+var nome=parser.search.split(",");
+var n=decodeURI(nome[0]).replace("?", "");
+document.write("<p>attore: "+n+"</p>"); 
+
+var programmazione=nome[1].split(";");
+
+document.write("programmazione:<br><br>")
+
+var i;
+for (i = 0; i < programmazione.length; i++) { 
+    document.write("<tr>")
+    var splitted3=programmazione[i].split("|");
+    document.write("<td>"+i+"</td>");
+    document.write("<td>_____________</td>");  
+    document.write("<td>"+decodeURI(splitted3[0])+"</td>");
+    document.write("<td>_____________</td>");  
+    document.write("<td>"+decodeURI(splitted3[1])+"</td>"); 
+    document.write("<td>_____________</td>");  
+    var d=new Date(Number(splitted3[2]))
+    document.write("<td>"+d.toLocaleString()+"</td>"); 
+    document.write("<br>")
+    document.write("</tr>")
+}
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+
