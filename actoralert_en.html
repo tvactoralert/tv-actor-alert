@@ -75,7 +75,7 @@ for (i = 0; i < prg1.length; i++) {
     document.write("<li class='acilia-schedule-event ' data-datetime-timestamp='1520150400' data-end-timestamp='1520154000'\
 data-datetime-date='2018-03-04' data-id='111273685'><div class='row accordionToggle acilia-click-access'><div class='large-12 column new acilia-now-tag' style='display: none'><span class='label'>NOW</span></div><div\ class='large-3 medium-3 small-3 column'><h5>"+d+"</h5></div><div class='large-8 medium-8 small-8 column'><h3 >"+decodeURI(fld1[1])+"</h3></div>\
 <div class='large-8 medium-8 small-8 column'><h4 >"+decodeURI(fld1[0])+"</h4></div>\
-<div class='large-1\ medium-1 small-1 column controller tCenter'>+</div></div><div class='row accordionContent acilia-schedule-event-content'><div class='large-3 medium-3 small-1 column left'></div><div\ class='large-8\ medium-8 small-12 column description left'><a href='https://www.google.com/search?q="+fld1[1]+" movie review' target='_blank' class='link'>Search for a review</a></div></div></li>");
+<div class='large-1\ medium-1 small-1 column controller tCenter'>+</div></div><div class='row accordionContent acilia-schedule-event-content'><div class='large-3 medium-3 small-1 column left'></div><div\ class='large-8\ medium-8 small-12 column description left'><a href='https://www.google.com/search?q="+encodeURIComponent(decodeURI(fld1[1]))+" movie review' target='_blank' class='link'>Search for a review</a></div></div></li>");
   
 }
 
